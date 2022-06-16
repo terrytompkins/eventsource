@@ -1,6 +1,6 @@
 {
   "name": "eventsource",
-  "version": "2.1.0",
+  "version": "2.1.10",
   "description": "W3C compliant EventSource client for Node.js and browser (polyfill)",
   "keywords": [
     "eventsource",
@@ -38,13 +38,15 @@
     "nyc": "^11.2.1",
     "serve-static": "^1.12.3",
     "ssestream": "^1.0.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.10.0"
   },
   "scripts": {
     "test": "mocha --reporter spec && standard",
     "postpublish": "git push && git push --tags",
     "coverage": "nyc --reporter=html --reporter=text _mocha --reporter spec",
-    "build": "node ./esbuild.js",
+    "build": "webpack",
     "prepare": "npm run build"
   },
   "engines": {
@@ -54,8 +56,5 @@
     "globals": [
       "URL"
     ]
-  },
-  "dependencies": {
-    "esbuild": "^0.14.43"
   }
 }
