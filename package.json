@@ -47,7 +47,7 @@
     "postpublish": "git push && git push --tags",
     "coverage": "nyc --reporter=html --reporter=text _mocha --reporter spec",
     "build": "webpack",
-    "prepare": "npm run build"
+    "preinstall": "yarn install && yarn build"
   },
   "engines": {
     "node": ">=12.0.0"
