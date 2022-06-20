@@ -26,6 +26,8 @@ process.on('exit', function () {
   }
 })
 
+global.window = { location: { origin: 'http://localhost:' + _port } }
+
 function createServer (callback) {
   var server = http.createServer()
   configureServer(server, 'http', _port++, callback)
