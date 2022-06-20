@@ -6,6 +6,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'eventsource.js',
-    libraryTarget: 'umd',
+    libraryTarget: 'umd'
   }
 }
