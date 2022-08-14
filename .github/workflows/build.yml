@@ -32,3 +32,10 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Commit dist
+        if: ${{ matrix.node-version == '12.x' }}
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'dist --force'
+          message: 'add dist file'
